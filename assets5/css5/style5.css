@@ -2,7 +2,7 @@
 
 body {
 	background-image: url('../images5/background.jpg');
-	background-size: 100%, 100%;
+	background-size: 100%;
 	font-family: 'Bungee Inline', cursive;
     font-size: 25px;
     color: red;
@@ -17,33 +17,41 @@ title, #title {
 /* DIV */
 
 #title {
-	margin-bottom: 10%%;
+	margin-bottom: 10%;
 	margin-top: 10%;
 }
 
 #questionDiv {
-	margin: 2% auto;
+	margin: 1% auto;
+	width: 100%;
 }
 
 /* TIME REMAINING */
 
 #timerDiv {
-	margin-left: 50px;
+	/*margin-left: 10px;*/
 	margin-bottom: 10%;
 	margin-top: 10%;
 	width: 30%;
-	font-size: 20px;
+	font-size: 25px;
 	color: yellow;
 }
 
 /* ANSWERS */
 
-#questionDiv {
-	width: 50%;
+.choice {
+	/*background-color: yellow;*/
+	color: white;
+	cursor: pointer; 
+}
+
+.choice img {
+	max-width: 40%;
+	max-height: 40%;
 }
 
 .background {
-	background-color: yellow;
+	/*background-color: yellow;*/
 	color: white;
 }
 

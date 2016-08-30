@@ -52,6 +52,8 @@ $(document).ready(function(){
 			$timerSpan.html("Warranty Expired!");
 			$timerSpan.css('margin-center', '75px')
 
+			currentQuestion.displayImage();
+
 			time = 10; 
 			questionIndex += 1;
 
@@ -164,7 +166,7 @@ $(document).ready(function(){
 	var shelby = $("<img>", {class: 'answerImg', src: "assets5/images5/viper.jpg"});
 	var tesla = $("<img>", {class: 'answerImg', src: "assets5/images5/tesla.jpg"});
 	var viper = $("<img>", {class: 'answerImg', src: "assets5/images5/viper.jpg"});
-	var wiesmann = $("<img>", {class: 'answerImg', src: "assets5/images5/wiesmann.jpg"});
+	//var wiesmann = $("<img>", {class: 'answerImg', src: "assets5/images5/wiesmann.jpg"});
 
 // MUSIC //
 
@@ -192,16 +194,30 @@ $(document).ready(function(){
 
 	var chrysler = new question("What's the make and country that gave us this logo?", ['Lexus - Japan', 'Peugeot - korea', 
 		'Audi - Germany', 'Chrysler - USA'], 'Chrysler - USA', chrysler );
+	
+	var hyundai = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Tesla - USA', 
+		'Saturn - USA', 'Saturn - USA'], 'Hyundai - Korea', hyundai );
+	
+	var jaguar = new question("What's the make and country that gave us this logo?", ['Chrysler - USA', 'Peugeot - korea', 
+		'Audi - Germany', 'Chrysler - USA'], 'Hyundai - Korea', jaguar );
 
-	var shelby = new question("What's the make and country that gave us this logo?", ['Hyundai - Korea', 'Ford - USA', 
-		'Chrysler - USA', 'Audi - Germany'], 'Chrysler - USA', chrysler );
+	var peugeot = new question("What's the make and country that gave us this logo?", ['Bentley - England', 'Peugeot - korea', 
+		'Audi - Germany', 'Saturn - USA'], 'Peugeot - korea', peugeot );
 
-	questions = [ acura, audi, bentley, chrysler, shelby ];//hyundai, jaguar, lexus,
-	 //lincoln, mazda, peugeot, saturn, shelby, tesla, viper, wiesmann];
+	var shelby = new question("What's the make and country that gave us this logo?", ['Hyundai - Korea', 'Tesla - USA', 
+		'Chrysler - USA', 'Audi - Germany'], 'Ford - USA', shelby );
 
-	questions = shuffleArray(questions);
+	var tesla = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Peugeot - korea', 
+		'Tesla - USA', 'Hyundai - Korea'], 'Tesla - USA', tesla );
 
-	currentQuestion = questions[questionIndex];
+	var viper = new question("What's the make and country that gave us this logo?", ['Bentley - England', 'Tesla - USA', 
+		'Chrysler - USA', 'Audi - Germany'], 'Chrysler - USA', viper );
+
+	questions = [ acura, audi, bentley, chrysler, hyundai, jaguar, peugeot, shelby, tesla, viper ];
+
+	//questions = shuffleArray(questions);
+
+	//currentQuestion = questions[questionIndex];
 
 
 // GENERAL //
@@ -210,7 +226,6 @@ $(document).ready(function(){
 
 		console.log('next question')
 		console.log('question index: ' + questionIndex)
-
 
 		if 
 			(questionIndex == questions.length) {
@@ -221,8 +236,8 @@ $(document).ready(function(){
 
 		}else {
 			console.log('current question: ' + currentQuestion)
-			currentQuestion = questions[questionIndex];
-			//currentQuestion.displayQuestion();
+			//currentQuestion = questions[questionIndex];
+			currentQuestion.displayQuestion();
 			runTimer();
 			questionAnswered = false;
 		}
