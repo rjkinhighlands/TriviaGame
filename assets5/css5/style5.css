@@ -5,13 +5,13 @@ body {
 	background-size: 100%;
 	font-family: 'Bungee Inline', cursive;
     font-size: 25px;
-    color: red;
+    color: green;
 }
 
 title, #title {
 	font-family: 'Bungee', cursive;
 	font-size: 60px;
-	color: green;
+	color: red;
 }
 
 /* DIV */
@@ -21,15 +21,18 @@ title, #title {
 	margin-top: 10%;
 }
 
+#container2 {
+
+}
+
 #questionDiv {
-	margin: 1% auto;
+	margin: 5% auto;
 	width: 100%;
 }
 
 /* TIME REMAINING */
 
 #timerDiv {
-	/*margin-left: 10px;*/
 	margin-bottom: 10%;
 	margin-top: 10%;
 	width: 30%;
@@ -40,7 +43,6 @@ title, #title {
 /* ANSWERS */
 
 .choice {
-	/*background-color: yellow;*/
 	color: white;
 	cursor: pointer; 
 }
@@ -50,15 +52,10 @@ title, #title {
 	max-height: 40%;
 }
 
-.background {
-	/*background-color: yellow;*/
-	color: white;
-}
-
 /* START */
 
 #startButton {
-	background-color: red;
+	background-color: green;
 	color: white;
 	border-color: white;
 	margin-top: 20%;
