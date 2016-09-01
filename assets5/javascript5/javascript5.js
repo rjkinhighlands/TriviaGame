@@ -236,7 +236,7 @@ $(document).ready(function(){
 
 		}else {
 			console.log('current question: ' + currentQuestion)
-			//currentQuestion = questions[questionIndex];
+			currentQuestion = questions[questionIndex];
 			currentQuestion.displayQuestion();
 			runTimer();
 			questionAnswered = false;
