@@ -16,6 +16,7 @@ $(document).ready(function(){
 	var $choice3 = $('#choice3');
 	var $choice4 = $('#choice4');
 	var $start = $('#startButton');
+	var $choiceImg = $('#choiceimg');
 
 	// Questions //
 
@@ -89,6 +90,7 @@ $(document).ready(function(){
 			$question.html(this.text);
 
 			// Choices //
+			$choiceImg.html(this.image);
 
 			$choice1.html(this.choices[0]);
 			$choice1.data('choice', this.choices[0] );
@@ -110,7 +112,7 @@ $(document).ready(function(){
 			$choice3.empty();
 			$choice4.empty();
 
-			$choice2.html(this.image);
+			$choiceImg.html(this.image);
 
 			if (this.sound){
 				$choice3.html(this.sound);
@@ -163,7 +165,7 @@ $(document).ready(function(){
 	var mazda = $("<img>", {class: 'answerImg', src: "assets5/images5/mazda.jpg"});
 	var peugeot = $("<img>", {class: 'answerImg', src: "assets5/images5/peugeot.jpg"});
 	var saturn = $("<img>", {class: 'answerImg', src: "assets5/images5/saturn.jpg"});
-	var shelby = $("<img>", {class: 'answerImg', src: "assets5/images5/viper.jpg"});
+	var shelby = $("<img>", {class: 'answerImg', src: "assets5/images5/shelby.jpg"});
 	var tesla = $("<img>", {class: 'answerImg', src: "assets5/images5/tesla.jpg"});
 	var viper = $("<img>", {class: 'answerImg', src: "assets5/images5/viper.jpg"});
 	//var wiesmann = $("<img>", {class: 'answerImg', src: "assets5/images5/wiesmann.jpg"});
@@ -187,27 +189,27 @@ $(document).ready(function(){
 		'Hyundai - Korea', 'Acura - Japan'], 'Acura - Japan', acura );
 	
 	var audi = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Saturn - USA', 
-		'Peugeot - korea', 'Bentley - England'], 'Audi - Germany', audi );
+		'Peugeot - France', 'Bentley - England'], 'Audi - Germany', audi );
 
 	var bentley = new question("What's the make and country that gave us this logo?", ['Lincoln - USA', 'Audi - Germany', 
 		'Bentley - England', 'Acura - Japan'], 'Bentley - England', bentley );
 
-	var chrysler = new question("What's the make and country that gave us this logo?", ['Lexus - Japan', 'Peugeot - korea', 
+	var chrysler = new question("What's the make and country that gave us this logo?", ['Lexus - Japan', 'Peugeot - France', 
 		'Audi - Germany', 'Chrysler - USA'], 'Chrysler - USA', chrysler );
 	
 	var hyundai = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Tesla - USA', 
-		'Saturn - USA', 'Saturn - USA'], 'Hyundai - Korea', hyundai );
+		'Hyundai - Korea', 'Saturn - USA'], 'Hyundai - Korea', hyundai );
 	
-	var jaguar = new question("What's the make and country that gave us this logo?", ['Chrysler - USA', 'Peugeot - korea', 
-		'Audi - Germany', 'Chrysler - USA'], 'Hyundai - Korea', jaguar );
+	var jaguar = new question("What's the make and country that gave us this logo?", ['Chrysler - USA', 'Peugeot - France', 
+		'Jaquar - England', 'Chrysler - USA'], 'Jaquar - England', jaguar );
 
-	var peugeot = new question("What's the make and country that gave us this logo?", ['Bentley - England', 'Peugeot - korea', 
-		'Audi - Germany', 'Saturn - USA'], 'Peugeot - korea', peugeot );
+	var peugeot = new question("What's the make and country that gave us this logo?", ['Bentley - England', 'Peugeot - France', 
+		'Audi - Germany', 'Saturn - USA'], 'Peugeot - France', peugeot );
 
-	var shelby = new question("What's the make and country that gave us this logo?", ['Hyundai - Korea', 'Tesla - USA', 
+	var shelby = new question("What's the make and country that gave us this logo?", ['Ford - USA', 'Tesla - USA', 
 		'Chrysler - USA', 'Audi - Germany'], 'Ford - USA', shelby );
 
-	var tesla = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Peugeot - korea', 
+	var tesla = new question("What's the make and country that gave us this logo?", ['Audi - Germany', 'Peugeot - France', 
 		'Tesla - USA', 'Hyundai - Korea'], 'Tesla - USA', tesla );
 
 	var viper = new question("What's the make and country that gave us this logo?", ['Bentley - England', 'Tesla - USA', 
